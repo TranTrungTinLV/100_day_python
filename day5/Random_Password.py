@@ -11,12 +11,25 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
 #Eazy game
-password = ""
-for i in range(1,nr_letters+1):
-    password += random.choice(letters)
-for i in range(1,nr_symbols+1):
-    password += random.choice(letters)
-for i in range(1,nr_numbers+1):
-    password += random.choice(letters)
-print(password)
+# password = ""
+# for i in range(1,nr_letters+1):
+#     password += random.choice(letters)
+# for i in range(1,nr_symbols+1):
+#     password += random.choice(symbols)
+# for i in range(1,nr_numbers+1):
+#     password += random.choice(numbers)
+# print(password)
 
+#Hard game
+password_list = []
+result = ""
+for numbers in range(1,nr_numbers+1):
+    password_list += random.choice(letters)
+for symbol in range(1, nr_symbols+1):
+    password_list += random.choice(symbols)
+for letter in range(1+ nr_letters+1):
+    password_list += random.choice(letters)
+random.shuffle(password_list)
+for password in password_list:
+    result += password
+print(result)

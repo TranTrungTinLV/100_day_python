@@ -6,4 +6,5 @@ print("Hello") #in
 def myfunction():
     print("Hello")
     print("Bye")
+    
 myfunction() #thực thi hàm
